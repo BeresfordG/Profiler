@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp">
+        
+        <LinearLayout
+            android:background="@drawable/gradbackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/profile2"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Béresford Groenewaldt"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:textSize="30sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- this is the code for the scroll -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/lightgray">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!-- TEXT FOR PERSONAL INFO -->
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PERSONAL INFO"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+            <!-- Cards representing Personal Info -->
+            <android.support.v7.widget.CardView
+                android:layout_width="355dp"
+                android:layout_height="230dp"
+                android:layout_gravity="center_horizontal">
+                <!-- CARDVIEW -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/cardborder"
+                    android:weightSum="3">
+                    <!-- one of three parts of info -->
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/rightborder">
+                        <!-- IDENTITY NUMBER -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Identity#"
+                            android:textSize="15sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="940121 00696"
+                            android:textColor="@color/startblue"
+                            android:textSize="15sp"/>
+                        <!-- EMAIL ADDRESS -->
+                        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Email"
+                        android:textSize="15sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="zbgroenewaldt@gmail.com"
+                            android:textColor="@color/startblue"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/rightborder">
+                        <!-- DATE OF BIRTH -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="DOB"
+                            android:textSize="15sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="21/01/1994"
+                            android:textColor="@color/startblue"
+                            android:textSize="15sp"/>
+                        <!-- POSTAL ADDRESS -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Postal Adress"
+                            android:textSize="15sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="P.O.Box 20259"
+                            android:textColor="@color/startblue"
+                            android:textSize="15sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal">
+                        <!-- PHONE NUMBER -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Phone number"
+                            android:textSize="15sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="081195848"
+                            android:textColor="@color/startblue"
+                            android:textSize="15sp"/>
+                        <!-- RESIDENTIAL ADDRESS -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="Residential Address"
+                            android:textSize="15sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Sirkoon Street, ERF 2149"
+                            android:textColor="@color/startblue"
+                            android:textSize="15sp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+                <!-- TEXT FOR SKILLS AND ABILITIES -->
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SKILLS &amp; ABILITIES"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+                <!-- Cards representing Skills and Abilities -->
+                <android.support.v7.widget.CardView
+                    android:layout_width="355dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal">
+                    <!-- CARDVIEW -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/cardborder">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="15sp"
+                            android:text="\u2022 6 months experience in Android Studio."/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="15sp"
+                            android:text="\u2022 2 years of experience in programming with Java."/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="15sp"
+                            android:text="\u2022 1 year of experience setting up networks. "/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="15sp"
+                            android:text="\u2022 6 months experience in web development (Using HTML 5, CSS, and Bootstrap)"/>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <!-- TEXT FOR WORK EXPERIENCE -->
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WORK EXPERIENCE"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+        <!-- Cards representing Work Experience -->
+        <android.support.v7.widget.CardView
+            android:layout_width="355dp"
+            android:layout_height="135dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal">
+            <!-- CARDVIEW -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/cardborder">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:textSize="15sp"
+                    android:text="\u2022 2 months - File Management - Grand Namibia"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:textSize="15sp"
+                    android:text="\u2022 5 years - computer maintenance and repairs"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:textSize="15sp"
+                    android:text="\u2022 2 months - Web developer at Possibility Thinkers"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+                <!-- TEXT FOR EDUCATIONAL BACKGROUND -->
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EDUCATIONAL BACKGROUND"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+                <!-- Cards representing Educational Background -->
+                <android.support.v7.widget.CardView
+                    android:layout_width="355dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal">
+                    <!-- CARDVIEW -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/cardborder">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="15sp"
+                            android:text="\u2022 University of Namibia (UNA) - 2014, Bachelor of Science in Computer Science (Honors)"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="15sp"
+                            android:text="\u2022 Current year - 4th year"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!-- TEXT FOR LEADERSHIP SKILLS -->
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LEADERSHIP SKILLS"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+                <!-- Cards representing Leadership Skills-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="355dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal">
+                    <!-- CARDVIEW -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/cardborder">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="15sp"
+                            android:text="\u2022 Project leader in 3rd year Software Engineering project."/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="15sp"
+                            android:text="\u2022 Class representative of 2014 and 2018."/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!-- TEXT FOR OBJECTIVES -->
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OBJECTIVES"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+                <!-- Cards representing Objectives-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="355dp"
+                    android:layout_height="215dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal">
+                    <!-- CARDVIEW -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/cardborder">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="15sp"
+                            android:text="\u2022 To gain experience in the working industry and apply it to the appropriate environment."/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="15sp"
+                            android:text="\u2022 To master a certain professional domain before moving on to the next one"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="15sp"
+                            android:text="\u2022 To socialize and create bonds between co-workers."/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="15sp"
+                            android:text="\u2022 To always be open and willing to learn and expand my knowledge."/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
